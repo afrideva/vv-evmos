@@ -1,0 +1,44 @@
+{
+  "name": "@afrideva/preact-compat-starter",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "deploy": "cp vercel.json dist/ && cp -r ./.vercel dist/ &&  cd dist && vercel deploy",
+    "deploy:prod": "cp vercel.json dist/ && cp -r ./.vercel dist/ && cd dist && vercel deploy --prod",
+    "preview": "vite preview",
+    "serve:dist": "http-server dist  --proxy http://localhost:7778? -p 7778"
+  },
+  "dependencies": {
+    "@afrideva/ui": "link:../ui",
+    "axios": "^1.2.0",
+    "blessed": "^0.1.81",
+    "blessed-contrib": "^4.11.0",
+    "ervy": "^1.0.7",
+    "react": "^18.2.0",
+    "react-csv": "^2.2.2",
+    "react-csv-downloader": "^2.9.0",
+    "react-dom": "^18.2.0",
+    "react-financial-charts": "^1.3.2",
+    "react-router-dom": "^6.4.3",
+    "talib": "^1.1.4",
+    "technicalindicators": "^3.1.0",
+    "vite-plugin-svgr": "^2.2.2"
+  },
+  "devDependencies": {
+    "@esbuild-plugins/node-globals-polyfill": "^0.1.1",
+    "@esbuild-plugins/node-modules-polyfill": "^0.1.4",
+    "@rollup/plugin-inject": "^5.0.2",
+    "@tailwindcss/forms": "^0.5.3",
+    "@vitejs/plugin-react": "^2.2.0",
+    "autoprefixer": "^10.4.13",
+    "better-sqlite3": "^8.0.0",
+    "buffer": "^6.0.3",
+    "postcss": "^8.4.19",
+    "rollup-plugin-visualizer": "^5.8.3",
+    "tailwindcss": "^3.2.4",
+    "vite": "^3.2.4",
+    "vite-plugin-commonjs": "^0.5.3"
+  }
+}
